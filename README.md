@@ -1,0 +1,2 @@
+# javaProject
+Hastane sistemi.
