@@ -12,17 +12,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="650.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastane.Controllers.Client.AnaSayfaController">
-   <Text layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merhaba, Hasan" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
-   <Label layoutX="766.0" layoutY="25.0" text="Bugünki Tarih" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
-   <HBox layoutX="31.2" layoutY="180.0" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: #C3D7E0;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="31.0">
+<AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #EEEEFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastane.Controllers.Client.AnaSayfaController">
+   <Text fx:id="anaSayfa_HastaAdi_lbl" layoutX="44.0" layoutY="46.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Merhaba, Hasan" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="30.0" />
+   <Label fx:id="anaSayfa_guncelTarih_lbl" layoutX="766.0" layoutY="25.0" text="Bugünki Tarih" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+   <HBox layoutX="31.2" layoutY="180.0" prefHeight="202.0" prefWidth="776.0" style="-fx-background-color: #C3D7E0;" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="40.0">
       <FlowPane prefHeight="200.0" prefWidth="200.0">
          <Label prefHeight="100.0" prefWidth="109.0" text="BOY  :">
             <font>
                <Font name="SansSerif Bold" size="33.0" />
             </font>
          </Label>
-         <Text fx:id="boy_text" strokeType="OUTSIDE" strokeWidth="0.0" text="40" wrappingWidth="87.73672494888297">
+         <Text fx:id="anaSayfa_boy_text" strokeType="OUTSIDE" strokeWidth="0.0" text="40" wrappingWidth="87.73672494888297">
             <font>
                <Font size="48.0" />
             </font>
@@ -32,7 +32,7 @@
                <Font name="SansSerif Bold" size="33.0" />
             </font>
          </Label>
-         <Text fx:id="kilo_text" layoutX="110.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40" wrappingWidth="90.13677978515625">
+         <Text fx:id="anaSayfa_kilo_text" layoutX="110.0" layoutY="84.0" strokeType="OUTSIDE" strokeWidth="0.0" text="40" wrappingWidth="90.13677978515625">
             <font>
                <Font size="48.0" />
             </font>
@@ -61,7 +61,7 @@
       <FlowPane prefHeight="202.0" prefWidth="378.0">
          <children>
             <Line endX="100.0" startX="100.0" startY="199.0" strokeWidth="2.0" />
-            <ImageView fitHeight="200.0" fitWidth="384.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="198.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../Resimler/vucut_kitle.png" />
                </image>
@@ -69,5 +69,5 @@
          </children>
       </FlowPane>
    </HBox>
-   <HBox layoutX="30.0" layoutY="416.0" prefHeight="200.0" prefWidth="789.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" />
+   <HBox layoutX="37.0" layoutY="420.0" prefHeight="200.0" prefWidth="776.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.39999999999998" />
 </AnchorPane>

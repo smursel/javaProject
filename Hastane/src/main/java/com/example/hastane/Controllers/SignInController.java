@@ -1,5 +1,6 @@
 package com.example.hastane.Controllers;
 
+import com.example.hastane.App;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 
@@ -15,12 +16,14 @@ public class SignInController implements Initializable {
     public ChoiceBox<String> hastaKanChoiceBox;
     public ChoiceBox<String> hastaCinsiyetChoiceBox;
     public DatePicker hastaDatePicker;
-    public TextField hastaDogumYeri;
-    public TextField hastaYasadıgıUlke;
+    public ComboBox hastaDogumYeri_comBox;
+    public ComboBox hastaYasadigiSehir_comBox;
     public TextField hastaBoy;
     public TextField hastaKilo;
     public PasswordField hastaPassword;
     public Label sign_hata_label;
+
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
