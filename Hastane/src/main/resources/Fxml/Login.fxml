@@ -48,7 +48,7 @@
          </VBox.margin></TextField>
       <Label fx:id="password_label" layoutX="10.0" layoutY="53.0" text="Şifre" />
       <PasswordField fx:id="password_field" styleClass="input_field" />
-      <Button fx:id="login_button" mnemonicParsing="false" text="Giriş">
+      <Button fx:id="login_button" mnemonicParsing="false" onMouseClicked="#girisYapButon" text="Giriş">
          <effect>
             <DropShadow height="6.96" offsetY="2.0" radius="1.24" width="0.0" />
          </effect>

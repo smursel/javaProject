@@ -14,9 +14,11 @@ import java.util.ResourceBundle;
 
 public class App extends Application implements Initializable {
     //public static ArrayList<Hastalar> obj = new ArrayList<>();
+    public static Stage stage;  //mevcut stage
 
     @Override
-    public void start(Stage stage) throws Exception {
+    public void start(Stage primaryStage){
+        stage = primaryStage;
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/BorderPane.fxml"));
             BorderPane root = loader.load();

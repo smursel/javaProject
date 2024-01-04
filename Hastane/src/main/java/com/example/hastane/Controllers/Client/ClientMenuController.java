@@ -31,9 +31,7 @@ public class ClientMenuController implements BorderPaneSayfaYonetimi, Initializa
     public Button hesabim_btn;
 
     @FXML
-    public BorderPane mainBorderPane ;
-
-
+    public BorderPane mainBorderPane;
 
     public void anaSayfaYukle(MouseEvent event){
         yukleSayfa(mainBorderPane, "/Fxml/Client/AnaSayfa.fxml");
