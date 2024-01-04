@@ -33,7 +33,6 @@ public class LoginController implements BorderPaneSayfaYonetimi, Initializable {
     public Label signInLabel;
     public AnchorPane mainAnchorPane;
     public Label login_sifreDegistir_lbl;
-    public BorderPane sideBorderPane;   //ana sayfadan giriş butonuna tıklandığında geçilecek border pane
 
     public void kayitOlYukle(MouseEvent event){
         silMenu(mainAnchorPane);    //login anchorunu sildik
@@ -59,15 +58,10 @@ public class LoginController implements BorderPaneSayfaYonetimi, Initializable {
     //GİRİŞ YAP butonuna basildiğiğnda border pane e atmak için
 
     public void girisYapButon(MouseEvent event) {
-        try {
-            sideBorderPane = FXMLLoader.load(getClass().getResource("/Fxml/Client/BorderPane.fxml"));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
         silMenu(mainAnchorPane);    //login anchorunu sildik
-        yukleSayfa(sideBorderPane, "/Fxml/Client/BorderPane.fxml");
+        yukleSayfa("/Fxml/Client/BorderPane.fxml");
     }
-    public void yukleSayfa(BorderPane pane, String fxml) {
+    public void yukleSayfa(String fxml) {
         Parent root = null;
         try {
             root = FXMLLoader.load(getClass().getResource(fxml));
