@@ -28,7 +28,7 @@
             <Cursor fx:constant="HAND" />
          </cursor>
       </Label>
-      <Label fx:id="login_sifreDegistir_lbl" layoutX="30.0" layoutY="400.0" onMouseClicked="#kayitOlYukle" text="Şifremi Unttum" underline="true">
+      <Label fx:id="login_sifreDegistir_lbl" layoutX="30.0" layoutY="400.0" onMouseClicked="#sifremiUnuttumYukle" text="Şifremi Unttum" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>
@@ -44,18 +44,30 @@
       <Label fx:id="tc_label" layoutX="10.0" layoutY="10.0" text="T.C Kimlik No" />
       <TextField fx:id="tc_field" prefHeight="26.0" prefWidth="346.0" styleClass="input_field">
          <VBox.margin>
-            <Insets right="2.0" />
+            <Insets right="180.0" />
          </VBox.margin></TextField>
       <Label fx:id="password_label" layoutX="10.0" layoutY="53.0" text="Şifre" />
-      <PasswordField fx:id="password_field" styleClass="input_field" />
-      <Button fx:id="login_button" mnemonicParsing="false" onMouseClicked="#girisYapButon" text="Giriş">
-         <effect>
-            <DropShadow height="6.96" offsetY="2.0" radius="1.24" width="0.0" />
-         </effect>
+      <PasswordField fx:id="password_field" styleClass="input_field">
+         <VBox.margin>
+            <Insets bottom="8.0" right="180.0" />
+         </VBox.margin></PasswordField>
+      <Button fx:id="login_button" mnemonicParsing="false" onMouseClicked="#girisYapButon" prefHeight="32.0" prefWidth="228.0" text="Giriş">
          <cursor>
             <Cursor fx:constant="HAND" />
-         </cursor></Button>
-      <Label fx:id="hata_label" layoutX="10.0" layoutY="10.0" styleClass="hata_label" text="Hata" />
+         </cursor>
+         <VBox.margin>
+            <Insets right="341.0" />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Label fx:id="hata_label" layoutX="10.0" layoutY="10.0" prefHeight="19.0" prefWidth="570.0" styleClass="hata_label" text="Hata" />
+      <padding>
+         <Insets left="90.0" />
+      </padding>
    </VBox>
 
 </AnchorPane>

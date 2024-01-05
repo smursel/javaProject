@@ -36,13 +36,16 @@ public class LoginController implements BorderPaneSayfaYonetimi, Initializable {
 
     public void kayitOlYukle(MouseEvent event){
         silMenu(mainAnchorPane);    //login anchorunu sildik
-        yukleSayfa(mainAnchorPane, "/Fxml/Signin.fxml");
+        yukleSayfa(mainAnchorPane, "/Fxml/Signin.fxml");    //kayıt ol sayfasını yükledi
+    }
+
+    public void sifremiUnuttumYukle(MouseEvent event){
+        silMenu(mainAnchorPane);
+        yukleSayfa("/Fxml/SifremiUnuttum.fxml");
     }
 
     @Override
-    public void silMenu(Object pane) {
-        ((AnchorPane) pane).getChildren().clear();
-    }
+    public void silMenu(Object pane) {((AnchorPane) pane).getChildren().clear();}
 
     @Override
     public void yukleSayfa(Object pane, String fxml) {

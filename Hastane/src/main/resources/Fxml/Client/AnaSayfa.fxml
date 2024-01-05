@@ -39,34 +39,30 @@
          </Text>
       </FlowPane>
       <VBox prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #596266;">
-         <children>
-            <Label text="VÜCUT KİTLE İNDEKSİ" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="16.0" />
-               </font>
-               <VBox.margin>
-                  <Insets bottom="20.0" left="24.0" top="6.0" />
-               </VBox.margin>
-            </Label>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="18.94" wrappingWidth="171.0">
-               <font>
-                  <Font size="60.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="27.0" />
-               </VBox.margin>
-            </Text>
-         </children>
+         <Label text="VÜCUT KİTLE İNDEKSİ" textFill="WHITE">
+            <font>
+               <Font name="System Bold" size="16.0"/>
+            </font>
+            <VBox.margin>
+               <Insets bottom="20.0" left="24.0" top="6.0"/>
+            </VBox.margin>
+         </Label>
+         <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="18.94" wrappingWidth="171.0">
+            <font>
+               <Font size="60.0"/>
+            </font>
+            <VBox.margin>
+               <Insets left="27.0"/>
+            </VBox.margin>
+         </Text>
       </VBox>
       <FlowPane prefHeight="202.0" prefWidth="378.0">
-         <children>
-            <Line endX="100.0" startX="100.0" startY="199.0" strokeWidth="2.0" />
-            <ImageView fitHeight="198.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../Resimler/vucut_kitle.png" />
-               </image>
-            </ImageView>
-         </children>
+         <Line endX="100.0" startX="100.0" startY="199.0" strokeWidth="2.0"/>
+         <ImageView fitHeight="198.0" fitWidth="378.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@../../Resimler/vucut_kitle.png"/>
+            </image>
+         </ImageView>
       </FlowPane>
    </HBox>
    <HBox layoutX="37.0" layoutY="420.0" prefHeight="200.0" prefWidth="776.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="37.39999999999998" />

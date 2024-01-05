@@ -30,6 +30,9 @@
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
         </TextField>
         <Label prefHeight="18.0" prefWidth="110.0" text="Doğum Yeri">
             <padding>
@@ -42,7 +45,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
         </Label>
-      <ComboBox fx:id="hesabim_dogumYeri_comBox" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
+      <ComboBox fx:id="hesabim_dogumYeri_comBox" editable="true" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
          <FlowPane.margin>
             <Insets bottom="25.0" left="9.0" />
          </FlowPane.margin>
@@ -59,6 +62,9 @@
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
         </TextField>
         <Label layoutX="330.0" layoutY="39.0" prefHeight="18.0" prefWidth="110.0" text="Yaşadığı Şehir">
             <padding>
@@ -71,7 +77,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
         </Label>
-      <ComboBox fx:id="hesabim_yasadigiSehir_comBox" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
+      <ComboBox fx:id="hesabim_yasadigiSehir_comBox" editable="true" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;">
          <FlowPane.margin>
             <Insets bottom="25.0" left="9.0" />
          </FlowPane.margin>
@@ -88,6 +94,9 @@
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
         </TextField>
         <Label layoutX="291.0" layoutY="74.0" prefHeight="18.0" prefWidth="110.0" text="Boy (cm)">
             <padding>
@@ -100,7 +109,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
         </Label>
-        <TextField fx:id="hesabim_boy_tfield" editable="false" layoutX="400.0" layoutY="65.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;" styleClass="input_field" text="boyu">
+        <TextField fx:id="hesabim_boy_tfield" layoutX="400.0" layoutY="65.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;" styleClass="input_field" text="boyu">
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
@@ -117,6 +126,9 @@
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
         </TextField>
         <Label layoutX="291.0" layoutY="109.0" prefHeight="18.0" prefWidth="110.0" text="Kilo (kg)">
             <padding>
@@ -129,7 +141,7 @@
             <Font name="System Bold" size="13.0" />
          </font>
         </Label>
-        <TextField fx:id="hesabim_kilo_tfield" editable="false" layoutX="400.0" layoutY="100.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;" styleClass="input_field" text="kilosu">
+        <TextField fx:id="hesabim_kilo_tfield" layoutX="400.0" layoutY="100.0" prefHeight="27.0" prefWidth="160.0" style="-fx-background-color: #FFFFFF;" styleClass="input_field" text="kilosu">
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" />
             </FlowPane.margin>
@@ -146,6 +158,9 @@
             <FlowPane.margin>
                 <Insets bottom="25.0" left="9.0" right="260.0" />
             </FlowPane.margin>
+         <cursor>
+            <Cursor fx:constant="DISAPPEAR" />
+         </cursor>
         </TextField>
       <Separator prefHeight="6.0" prefWidth="416.0" style="-fx-background-color: #FFFFFF;">
          <FlowPane.margin>
