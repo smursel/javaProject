@@ -24,14 +24,15 @@ enum Grup{
 class KanGrubu{
 
    public Grup harf;
+
    boolean isRhPositive;
 }
 
 public abstract class User {
    public String ad;
    public String soyad;
-   public String ePosta;
-   public Boolean isDead;
+   public   String ePosta;
+   public   Boolean isDead;
    public Cinsiyet cinsiyet;
    public KanGrubu kanGrubu;
    public String dogumYeri;

@@ -1,7 +1,7 @@
 public class Hekim extends User {
-    private Klinik klinik;  //enum
+    private Klinik klinik;//enum
     private Hastane hastane;
     private String brans;
 
-    private static int auth = 1;
+    private static final int auth = 1;
 }

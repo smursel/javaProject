@@ -65,4 +65,5 @@ public class Hasta extends User{
         this.telNo = telNo;
     }
 
+
 }
