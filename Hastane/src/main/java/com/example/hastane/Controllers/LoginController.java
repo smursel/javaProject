@@ -1,9 +1,7 @@
 package com.example.hastane.Controllers;
 
-import com.example.hastane.App;
+import com.example.hastane.Siniflar.App;
 import com.example.hastane.BorderPaneSayfaYonetimi;
-import com.example.hastane.Controllers.Client.ClientMenuController;
-import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
@@ -14,10 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.BorderPane;
-import javafx.stage.Stage;
 
-import javax.naming.spi.StateFactory;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

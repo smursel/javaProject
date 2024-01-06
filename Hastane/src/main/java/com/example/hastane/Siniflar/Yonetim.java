@@ -1,3 +1,5 @@
+package com.example.hastane.Siniflar;
+
 public interface Yonetim {
 
     Object KullaniciBul(String id);

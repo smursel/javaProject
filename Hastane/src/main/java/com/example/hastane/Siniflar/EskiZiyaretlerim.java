@@ -1,4 +1,4 @@
-package com.example.hastane;
+package com.example.hastane.Siniflar;
 import java.time.LocalDate;
 
 public class EskiZiyaretlerim {

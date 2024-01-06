@@ -1,30 +1,45 @@
+package com.example.hastane.Siniflar;
+
 import javax.swing.plaf.IconUIResource;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.chrono.ChronoLocalDateTime;
+import java.util.ArrayList;
 import java.util.Locale;
 
 class Randevu{
     public Hastane hastane;
-    public Klinik secilenKlinik;
-    static private long Counter;
+    public String secilenKlinik;
+    static public long Counter;
     public String randevuId;
     public LocalDate tarih;
     public LocalTime saat;
+    public boolean gidildiMi = false;
+    public boolean iptalMi = false;
+    public Hekim hekim;
+
     public Randevu(){
         ++Counter;
         randevuId= Counter + "";
-
-
     }
+
+    public Randevu(String randevuId) {
+        this.randevuId = randevuId;
+    }
+
 }
 class Ziyaretlerim extends Randevu{
 public String hastalik;
 public String recete;
+public String ilacCol;
+public String kullanimSekliCol;
+public String dozCol;
+public String kacGunCol;
 
 
-public Ziyaretlerim(){
+public Ziyaretlerim(String randevuId){
+    super(randevuId);
 }
 }
 class KrediKarti{
@@ -43,13 +58,61 @@ class KrediKarti{
     }
 }
 public class Hasta extends User{
-    private int Id;
-    private static int count= 0;
-    private long borc;
-    private KrediKarti krediKarti;
+   private final long Id;
+   private static long count= 0;
+   private long borc;
+   private KrediKarti krediKarti;
 
+   private ArrayList<Randevu> randevular = new ArrayList<Randevu>();
+   private ArrayList<Ziyaretlerim> ziyaretlerim = new ArrayList<Ziyaretlerim>();
+    public long getId() {
+        return Id;
+    }
+    public void setBorc(long borc){
+        this.borc = borc;
+    }
 
-    public Hasta(String ad, String soyad, String ePosta, Boolean isDead, Cinsiyet cinsiyet, KanGrubu kanGrubu, String dogumYeri, LocalDate dogumTarihi, double kilo, double boy, String TC, String yasadigiUlke, String telNo) {
+    public void setKrediKarti(KrediKarti krediKarti) {
+        this.krediKarti = krediKarti;
+    }
+
+    public KrediKarti getKrediKarti() {
+        return krediKarti;
+    }
+
+    public long getBorc() {
+        return borc;
+    }
+
+    public Randevu randevuBul(String id){
+        return randevular.stream().filter(c-> c.randevuId == id).findFirst().get();
+    }
+    public Ziyaretlerim ziyaretBul(String id){
+        return ziyaretlerim.stream().filter(c-> c.randevuId == id).findFirst().get();
+    }
+
+    public void randevuEkle(Randevu randevu){
+        randevular.add(randevu);
+        randevu.hekim.
+    }
+    public void ziyaretEkle(Ziyaretlerim ziyaret){
+        ziyaretlerim.add(ziyaret);
+    }
+    public void randevuSil(String id){
+        randevular.remove(randevuBul(id));
+    }
+    public void ziyaretSil(String id){
+        ziyaretlerim.remove(ziyaretBul(id));
+    }
+    public ArrayList<Randevu> getRandevular() {
+        return randevular;
+    }
+
+    public ArrayList<Ziyaretlerim> getZiyaretlerim() {
+        return ziyaretlerim;
+    }
+
+    public Hasta(KrediKarti krediKarti, long borc, String ad, String soyad, String ePosta, Boolean isDead, Cinsiyet cinsiyet, KanGrubu kanGrubu, String dogumYeri, LocalDate dogumTarihi, double kilo, double boy, String TC, String yasadigiSehir, String telNo) {
         this.ad = ad;
         this.soyad = soyad;
         this.ePosta = ePosta;
@@ -61,8 +124,12 @@ public class Hasta extends User{
         this.kilo = kilo;
         this.boy = boy;
         this.TC = TC;
-        this.yasadigiUlke = yasadigiUlke;
+        this.yasadigiSehir = yasadigiSehir;
         this.telNo = telNo;
+        this.krediKarti = krediKarti;
+        this.borc = borc;
+        count++;
+        this.Id = count;
     }
 
 

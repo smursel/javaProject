@@ -5,6 +5,7 @@ module com.example.hastane {
     requires java.sql;
     requires org.xerial.sqlitejdbc;
     requires com.google.gson;
+    requires java.desktop;
 
     opens com.example.hastane to javafx.fxml;
     exports com.example.hastane;

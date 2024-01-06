@@ -1,4 +1,5 @@
 package com.example.hastane.Siniflar;
+
 import java.time.LocalDate;
 
 enum Cinsiyet {
@@ -41,6 +42,6 @@ public abstract class User {
    public double kilo;
    public double boy;
    public String TC;
-   public String yasadigiUlke;
+   public String yasadigiSehir;
    public String telNo;
 }

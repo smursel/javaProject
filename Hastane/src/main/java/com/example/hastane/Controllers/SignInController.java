@@ -1,6 +1,6 @@
 package com.example.hastane.Controllers;
 
-import com.example.hastane.App;
+import com.example.hastane.Siniflar.App;
 import com.example.hastane.BorderPaneSayfaYonetimi;
 import com.example.hastane.Siniflar.Kontroller;
 import com.google.gson.JsonObject;
@@ -78,7 +78,7 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
         //hata varsa label a yazdırır yoksa hasta oluşturur kaydeder
         if (tumHatalar.isEmpty()){
             sign_hata_label.setVisible(false);
-            
+
         }else{
             sign_hata_label.setVisible(true);
             sign_hata_label.setText(tumHatalar.toString());
