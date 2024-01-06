@@ -1,3 +1,4 @@
+package com.example.hastane.Siniflar;
 public class HastaYonetimi implements Yonetim {
     @Override6
     public Object KullaniciBul(String id) {

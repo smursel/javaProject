@@ -1,3 +1,4 @@
+package com.example.hastane.Siniflar;
 public class Hekim extends User {
     private Klinik klinik;//enum
     private Hastane hastane;

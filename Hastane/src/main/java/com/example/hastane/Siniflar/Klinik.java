@@ -1,3 +1,4 @@
+package com.example.hastane.Siniflar;
 import java.util.ArrayList;
 
 public class Klinik{

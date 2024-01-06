@@ -1,3 +1,4 @@
+package com.example.hastane.Siniflar;
 import java.time.LocalDate;
 
 enum Cinsiyet {

@@ -78,7 +78,7 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
         //hata varsa label a yazdırır yoksa hasta oluşturur kaydeder
         if (tumHatalar.isEmpty()){
             sign_hata_label.setVisible(false);
-            //burda user oluşturacağız kaydedeceğiz
+            
         }else{
             sign_hata_label.setVisible(true);
             sign_hata_label.setText(tumHatalar.toString());
