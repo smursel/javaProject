@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1030.0" styleClass="login_container" stylesheets="@../Stiller/login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastane.Controllers.SifremiUnuttumController">
+    <VBox prefHeight="400.0" prefWidth="200.0" styleClass="login_logo_container" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <FontAwesomeIconView glyphName="HEARTBEAT" size="100.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin></FontAwesomeIconView>
+        <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="E-HASTANE" />
+      <Label onMouseClicked="#girisYaplbl" text="Giriş yap" underline="true" />
+    </VBox>
+    <Button fx:id="sifreUnuttum_buton" layoutX="521.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#sifreDegistirButon" prefHeight="38.0" prefWidth="147.0" style="-fx-font-weight: BOLD;" styleClass="login_logo_container" text="Şİfreyi Değiştir">
+        <font>
+            <Font name="System Bold" size="12.0" />
+        </font>
+      <effect>
+         <DropShadow />
+      </effect>
+      <cursor>
+         <Cursor fx:constant="HAND" />
+      </cursor>
+      <graphic>
+         <FontAwesomeIconView fx:id="sifreBasarili_icon" fill="YELLOW" glyphName="CHECK" selectionFill="LIME" visible="false" />
+      </graphic>
+    </Button>
+    <Label fx:id="sifreUnuttum_hata_label" alignment="TOP_LEFT" layoutX="755.0" layoutY="325.0" prefHeight="233.0" prefWidth="264.0" text="Hata" textFill="RED" visible="false" />
+   <VBox layoutX="454.0" layoutY="120.0" prefHeight="379.0" prefWidth="280.0">
+      <children>
+         <Label text="Ad-Soyad">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="sifreUnuttum_isim" prefHeight="26.0" prefWidth="100.0" styleClass="input_field">
+            <VBox.margin>
+               <Insets bottom="22.0" />
+            </VBox.margin>
+         </TextField>
+         <Label layoutX="10.0" layoutY="10.0" text="TC Kimlik No">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="sifreUnuttum_tc" layoutX="10.0" layoutY="28.0" prefHeight="26.0" prefWidth="100.0" styleClass="input_field">
+            <VBox.margin>
+               <Insets bottom="22.0" />
+            </VBox.margin>
+         </TextField>
+         <Label layoutX="10.0" layoutY="87.0" text="Telefon Numarası">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <TextField fx:id="sifreUnuttum_telNumara" layoutX="10.0" layoutY="105.0" prefHeight="26.0" prefWidth="100.0" promptText="+90 (5XX) XXXXXXX" styleClass="input_field">
+            <VBox.margin>
+               <Insets bottom="25.0" />
+            </VBox.margin>
+         </TextField>
+         <Line endX="100.0" startX="-177.0">
+            <VBox.margin>
+               <Insets bottom="12.0" />
+            </VBox.margin>
+         </Line>
+         <Label text="Yeni Şifre">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="sifreUnuttum_yeniSifre" promptText="Yeni şifrenizi girin" styleClass="input_field">
+            <VBox.margin>
+               <Insets bottom="15.0" />
+            </VBox.margin>
+         </PasswordField>
+         <Label layoutX="10.0" layoutY="221.0" text="Yeni Şifre Tekrar">
+            <font>
+               <Font name="System Bold" size="14.0" />
+            </font>
+         </Label>
+         <PasswordField fx:id="sifreUnuttum_yeniSifreTekrar" promptText="Yeni şifrenin tekrarını girin" styleClass="input_field" />
+      </children>
+   </VBox>
+   <Label fx:id="sifreBasarili_label" layoutX="490.0" layoutY="566.0" text="Şifre Değiştirildi, Giriş Yapabilirsiniz" visible="false" />
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
