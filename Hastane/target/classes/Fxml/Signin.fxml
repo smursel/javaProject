@@ -193,5 +193,5 @@
          <Cursor fx:constant="HAND" />
       </cursor>
    </Button>
-   <Label fx:id="sign_hata_label" layoutX="434.0" layoutY="487.0" prefHeight="18.0" prefWidth="362.0" text="Hata" textFill="RED" />
+   <Label fx:id="sign_hata_label" alignment="TOP_LEFT" layoutX="804.0" layoutY="312.0" prefHeight="326.0" prefWidth="212.0" text="Hata" textFill="RED" />
 </AnchorPane>

@@ -2,6 +2,7 @@ package com.example.hastane.Controllers;
 
 import com.example.hastane.App;
 import com.example.hastane.BorderPaneSayfaYonetimi;
+import com.example.hastane.Siniflar.Kontroller;
 import com.google.gson.JsonObject;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -12,7 +13,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.collections.FXCollections;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
@@ -53,7 +53,36 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
         yukleSayfa("/Fxml/Login.fxml");
     }
     public void kayitOlButon(MouseEvent event) {
-        //silMenu(mainAnchorPane);    //login anchorunu sildik
+        //Geceerli kontolleri yapar
+        Kontroller kontol = new Kontroller();
+        kontol.adSoyadKontrol(hastaIsmi.getText());
+        kontol.gecerliTC(hastaTc.getText());
+        kontol.isEmail(hastaEposta.getText());
+        kontol.gecerliTelefonNo(hastaTel.getText());
+        kontol.KanGrubuKontrol(hastaKanChoiceBox.getValue());
+        kontol.CinsiyetKontrol(hastaCinsiyetChoiceBox.getValue());
+        kontol.dateTimeKontrol(hastaDogumDatePicker.getValue());
+        kontol.SehirKontrol(hastaDogumYeri_comBox.selectionModelProperty().getName());
+        kontol.SehirKontrol(hastaYasadigiSehir_comBox.selectionModelProperty().getName());
+        kontol.boyKontrol(hastaBoy.getText());
+        kontol.kiloKontrol(hastaKilo.getText());
+        kontol.gecerliSifre(hastaPassword.getText());
+        
+        //arraydeki hataları stringe ekliyoroum
+        StringBuilder tumHatalar = new StringBuilder();
+        for (String s:kontol.hatalar) {
+            tumHatalar.append("\n");
+            tumHatalar.append(s);
+        }
+
+        //hata varsa label a yazdırır yoksa hasta oluşturur kaydeder
+        if (tumHatalar.isEmpty()){
+            sign_hata_label.setVisible(false);
+            //burda user oluşturacağız kaydedeceğiz
+        }else{
+            sign_hata_label.setVisible(true);
+            sign_hata_label.setText(tumHatalar.toString());
+        }
 
     }
     public void yukleSayfa(String fxml) {
