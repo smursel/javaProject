@@ -3,7 +3,9 @@ package com.example.hastane.Siniflar;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -24,8 +26,8 @@ public class App extends Application implements Initializable {
 
         stage = primaryStage;
         try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Client/BorderPane.fxml"));
-            BorderPane root = loader.load();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/Fxml/Login.fxml"));
+            AnchorPane root = loader.load();
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();

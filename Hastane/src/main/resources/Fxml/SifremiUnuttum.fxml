@@ -21,9 +21,9 @@
                 <Insets />
             </VBox.margin></FontAwesomeIconView>
         <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="E-HASTANE" />
-      <Label onMouseClicked="#sifreDegistirButon" text="Giriş yap" underline="true" />
+      <Label onMouseClicked="#girisYaplbl" text="Giriş yap" underline="true" />
     </VBox>
-    <Button fx:id="sifreUnuttum_buton" layoutX="521.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#sifreDegistirButon" prefHeight="38.0" prefWidth="146.0" style="-fx-font-weight: BOLD;" styleClass="login_logo_container" text="Şİfreyi Değiştir">
+    <Button fx:id="sifreUnuttum_buton" layoutX="521.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#sifreDegistirButon" prefHeight="38.0" prefWidth="147.0" style="-fx-font-weight: BOLD;" styleClass="login_logo_container" text="Şİfreyi Değiştir">
         <font>
             <Font name="System Bold" size="12.0" />
         </font>
@@ -33,8 +33,11 @@
       <cursor>
          <Cursor fx:constant="HAND" />
       </cursor>
+      <graphic>
+         <FontAwesomeIconView fx:id="sifreBasarili_icon" fill="YELLOW" glyphName="CHECK" selectionFill="LIME" visible="false" />
+      </graphic>
     </Button>
-    <Label fx:id="sifreUnuttum_hata_label" alignment="CENTER" layoutX="413.0" layoutY="552.0" prefHeight="38.0" prefWidth="362.0" text="Hata" textFill="RED" />
+    <Label fx:id="sifreUnuttum_hata_label" alignment="TOP_LEFT" layoutX="755.0" layoutY="325.0" prefHeight="233.0" prefWidth="264.0" text="Hata" textFill="RED" visible="false" />
    <VBox layoutX="454.0" layoutY="120.0" prefHeight="379.0" prefWidth="280.0">
       <children>
          <Label text="Ad-Soyad">
@@ -90,7 +93,8 @@
          <PasswordField fx:id="sifreUnuttum_yeniSifreTekrar" promptText="Yeni şifrenin tekrarını girin" styleClass="input_field" />
       </children>
    </VBox>
+   <Label fx:id="sifreBasarili_label" layoutX="490.0" layoutY="566.0" text="Şifre Değiştirildi, Giriş Yapabilirsiniz" visible="false" />
    <cursor>
-      <Cursor fx:constant="HAND" />
+      <Cursor fx:constant="DEFAULT" />
    </cursor>
 </AnchorPane>

@@ -1,10 +1,7 @@
 package com.example.hastane.Controllers.Client;
 
-import com.example.hastane.BorderPaneSayfaYonetimi;
-import com.example.hastane.EskiZiyaretlerim;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;

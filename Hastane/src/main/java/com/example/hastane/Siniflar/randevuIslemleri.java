@@ -30,9 +30,9 @@ public class randevuIslemleri {
         ArrayList<Hekim> availableHekimler = new ArrayList<Hekim>();
 
         hekimler.forEach(hekim -> {
-            if (hekim.getRandevuSayisi() < 10) {
-                availableHekimler.add(hekim);
-            }
+            //if (hekim.getRandevuSayisi() < 10) {
+            //    availableHekimler.add(hekim);
+            //}
         });
 
         return hekimler;

@@ -1,8 +1,7 @@
 package com.example.hastane.Controllers;
 
-import com.example.hastane.Siniflar.App;
+import com.example.hastane.Siniflar.*;
 import com.example.hastane.BorderPaneSayfaYonetimi;
-import com.example.hastane.Siniflar.Kontroller;
 import com.google.gson.JsonObject;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -78,7 +77,26 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
         //hata varsa label a yazdırır yoksa hasta oluşturur kaydeder
         if (tumHatalar.isEmpty()){
             sign_hata_label.setVisible(false);
+            Hasta hasta = new Hasta(0,
+                    hastaIsmi.getText(),
+                    hastaEposta.getText(),
+                    false,
+                    hastaCinsiyetChoiceBox.getValue().equals("E") ? Cinsiyet.ERKEK : Cinsiyet.KADIN,
+                    hastaKanChoiceBox.getValue(),
+                    hastaDogumYeri_comBox.selectionModelProperty().getName(),
+                    hastaDogumDatePicker.getValue(),
+                    Double.parseDouble(hastaKilo.getText()),
+                    Double.parseDouble(hastaBoy.getText()),
+                    hastaTc.getText(),
+                    hastaYasadigiSehir_comBox.selectionModelProperty().getName(),
+                    hastaTel.getText(),
+                    hastaPassword.getText());
 
+            App.hastalar.add(hasta);
+
+            hastaIsmi.clear(); hastaEposta.clear(); hastaCinsiyetChoiceBox.getSelectionModel().clearSelection(); hastaKanChoiceBox.getSelectionModel().clearSelection();
+            hastaDogumYeri_comBox.getSelectionModel().clearSelection(); hastaKilo.clear(); hastaBoy.clear(); hastaTc.clear();
+            hastaYasadigiSehir_comBox.getSelectionModel().clearSelection(); hastaTel.clear(); hastaPassword.clear();
         }else{
             sign_hata_label.setVisible(true);
             sign_hata_label.setText(tumHatalar.toString());

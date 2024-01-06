@@ -13,9 +13,9 @@ module com.example.hastane {
     exports com.example.hastane.Controllers.Admin;
     exports com.example.hastane.Controllers.Client;
     exports com.example.hastane.Controllers.Doctor;
-    exports com.example.hastane.Models;
     exports com.example.hastane.Views;
     exports com.example.hastane.Siniflar;
     opens com.example.hastane.Siniflar to javafx.fxml;
+    opens com.example.hastane.Controllers.Client to javafx.fxml;
 
 }

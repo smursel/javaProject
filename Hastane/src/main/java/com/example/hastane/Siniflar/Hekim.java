@@ -21,11 +21,11 @@ public class Hekim extends User {
         return yogunluk.stream().filter(yogunluk -> yogunluk.tarih.equals(tarih)).findFirst().orElse(null);
     }
     public void setyogunluk(Yogunluk yogunluk){
-        this.yogunluk.stream().filter(c-> c.tarih.equals(yogunluk.tarih)) = yogunluk;
+        //this.yogunluk.stream().filter(c-> c.tarih.equals(yogunluk.tarih)) = yogunluk;
     }
 
     public void arttirYogunluk(){
-        this.yogunluk.KisiSayisi++;
+        //this.yogunluk.KisiSayisi++;
     }
 
     public static int getAuth() {
@@ -55,9 +55,8 @@ public class Hekim extends User {
         this.klinik = klinik;
     }
 
-    public Hekim(String klinik, Hastane hastane, String TC, String ad, String soyad, String ePosta, boolean isDead, Cinsiyet cinsiyet, KanGrubu kanGrubu, String dogumYeri, double kilo, double boy, LocalDate dogumTarihi)  {
+    public Hekim(String klinik, Hastane hastane, String TC, String ad, String soyad, String ePosta, boolean isDead, Cinsiyet cinsiyet, String kanGrubu, String dogumYeri, double kilo, double boy, LocalDate dogumTarihi)  {
         this.ad = ad;
-        this.soyad = soyad;
         this.ePosta = ePosta;
         this.isDead = isDead;
         this.cinsiyet = cinsiyet;

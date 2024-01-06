@@ -61,7 +61,7 @@ public class Hasta extends User{
    private final long Id;
    private static long count= 0;
    private long borc;
-   private KrediKarti krediKarti;
+   //private KrediKarti krediKarti;
 
    private ArrayList<Randevu> randevular = new ArrayList<Randevu>();
    private ArrayList<Ziyaretlerim> ziyaretlerim = new ArrayList<Ziyaretlerim>();
@@ -72,13 +72,13 @@ public class Hasta extends User{
         this.borc = borc;
     }
 
-    public void setKrediKarti(KrediKarti krediKarti) {
+    /*public void setKrediKarti(KrediKarti krediKarti) {
         this.krediKarti = krediKarti;
-    }
+    }*/
 
-    public KrediKarti getKrediKarti() {
+    /*public KrediKarti getKrediKarti() {
         return krediKarti;
-    }
+    }*/
 
     public long getBorc() {
         return borc;
@@ -93,7 +93,7 @@ public class Hasta extends User{
 
     public void randevuEkle(Randevu randevu){
         randevular.add(randevu);
-        randevu.hekim.
+
     }
     public void ziyaretEkle(Ziyaretlerim ziyaret){
         ziyaretlerim.add(ziyaret);
@@ -112,9 +112,8 @@ public class Hasta extends User{
         return ziyaretlerim;
     }
 
-    public Hasta(KrediKarti krediKarti, long borc, String ad, String soyad, String ePosta, Boolean isDead, Cinsiyet cinsiyet, KanGrubu kanGrubu, String dogumYeri, LocalDate dogumTarihi, double kilo, double boy, String TC, String yasadigiSehir, String telNo) {
+    public Hasta(long borc, String ad, String ePosta, Boolean isDead, Cinsiyet cinsiyet, String kanGrubu, String dogumYeri, LocalDate dogumTarihi, double kilo, double boy, String TC, String yasadigiSehir, String telNo, String sifre) {
         this.ad = ad;
-        this.soyad = soyad;
         this.ePosta = ePosta;
         this.isDead = isDead;
         this.cinsiyet = cinsiyet;
@@ -126,10 +125,11 @@ public class Hasta extends User{
         this.TC = TC;
         this.yasadigiSehir = yasadigiSehir;
         this.telNo = telNo;
-        this.krediKarti = krediKarti;
+        /*this.krediKarti = krediKarti;*/
         this.borc = borc;
         count++;
         this.Id = count;
+        this.sifre = sifre;
     }
 
 

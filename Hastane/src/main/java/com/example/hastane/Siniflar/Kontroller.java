@@ -2,6 +2,7 @@ package com.example.hastane.Siniflar;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Optional;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -178,6 +179,21 @@ public class Kontroller {
             return false;
         }
         return true;
+    }
+
+    public void sifreGuncelle(String ad,String TC,String TelefonNo,String sifre,String sifre2){
+        Optional<Hasta> hasta = App.hastalar.stream().filter(c -> c.ad.equals(ad) && c.TC.equals(TC) && c.telNo.equals(TelefonNo)).findFirst();
+        if(hasta.isPresent()){
+            var gercekHasta = hasta.get();
+            if(gercekHasta != null){
+                Kontroller kontrol = new Kontroller();
+                if(sifre.equals(sifre2)){
+                    gercekHasta.sifre = sifre;
+                    hatalar.add("Başarıyla güncellendi");
+                }
+                hatalar.add("Şifreler uyuşmuyor");
+            }
+        }
     }
 
     }

@@ -2,21 +2,6 @@ package com.example.hastane.Siniflar;
 
 import java.time.LocalDate;
 
-enum Cinsiyet {
-   ERKEK(0),
-   KADIN(1);
-
-   private final int deger;
-
-   Cinsiyet(int deger) {
-      this.deger = deger;
-   }
-
-   public int getDeger() {
-      return deger;
-   }
-}
-
 enum Grup{
    A,
    B,
@@ -32,11 +17,10 @@ class KanGrubu{
 
 public abstract class User {
    public String ad;
-   public String soyad;
    public String ePosta;
    public Boolean isDead;
    public Cinsiyet cinsiyet;
-   public KanGrubu kanGrubu;
+   public String kanGrubu;
    public String dogumYeri;
    public LocalDate dogumTarihi;
    public double kilo;
@@ -44,4 +28,5 @@ public abstract class User {
    public String TC;
    public String yasadigiSehir;
    public String telNo;
+   public String sifre;
 }
