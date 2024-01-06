@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #EEEEFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastane.Controllers.Client.ZiyaretlerimController">
+   <children>
+      <VBox layoutX="16.0" layoutY="50.0" prefHeight="550.0" prefWidth="825.0">
+         <children>
+            <TableView fx:id="table" prefHeight="550.0" prefWidth="749.0" style="-fx-border-color: #FFFFFF; -fx-background-color: #AAEEEE;">
+              <columns>
+                <TableColumn fx:id="tarihCol" editable="false" prefWidth="100.0" text="Tarih" />
+                <TableColumn fx:id="hastaneCol" editable="false" prefWidth="160.0" text="Hastane" />
+                  <TableColumn fx:id="hekimCol" editable="false" prefWidth="160.0" text="Hekim" />
+                  <TableColumn fx:id="ilacCol" editable="false" prefWidth="160.0" text="İlaç Adı" />
+                  <TableColumn fx:id="kullanimSekliCol" prefWidth="92.5999755859375" text="Kullanım Şekli" />
+                  <TableColumn fx:id="dozCol" text="Günlük Doz" />
+                  <TableColumn fx:id="kacGunCol" prefWidth="68.0" text="Kaç Gün" />
+              </columns>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

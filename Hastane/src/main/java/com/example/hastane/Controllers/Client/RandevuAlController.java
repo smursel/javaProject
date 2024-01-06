@@ -18,6 +18,7 @@ public class RandevuAlController implements Initializable {
     public ComboBox randevu_hekimler_comBox;
     public DatePicker randevu_tarihi_datePicer;
     public Button randevu_al_button;
+    public Label randevuAL_hata_lbl;
 
     public void datePicTarihKisitla(){
         randevu_tarihi_datePicer.setDayCellFactory(picker -> new DateCell() {
@@ -26,7 +27,6 @@ public class RandevuAlController implements Initializable {
                 LocalDate today = LocalDate.now();
 
                 setDisable(empty || date.isBefore(today) || date.isAfter(LocalDate.of(today.getYear(), today.getMonth(), today.getDayOfMonth() + 15)));
-                //setDisable(empty || date.isBefore(today));
             }
         });
     }

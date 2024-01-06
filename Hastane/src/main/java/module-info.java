@@ -4,6 +4,7 @@ module com.example.hastane {
     requires de.jensd.fx.glyphs.fontawesome;
     requires java.sql;
     requires org.xerial.sqlitejdbc;
+    requires com.google.gson;
 
     opens com.example.hastane to javafx.fxml;
     exports com.example.hastane;

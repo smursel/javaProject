@@ -21,6 +21,7 @@
                 <Insets />
             </VBox.margin></FontAwesomeIconView>
         <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="E-HASTANE" />
+      <Label onMouseClicked="#sifreDegistirButon" text="Giriş yap" underline="true" />
     </VBox>
     <Button fx:id="sifreUnuttum_buton" layoutX="521.0" layoutY="513.0" mnemonicParsing="false" onMouseClicked="#sifreDegistirButon" prefHeight="38.0" prefWidth="146.0" style="-fx-font-weight: BOLD;" styleClass="login_logo_container" text="Şİfreyi Değiştir">
         <font>
@@ -89,4 +90,7 @@
          <PasswordField fx:id="sifreUnuttum_yeniSifreTekrar" promptText="Yeni şifrenin tekrarını girin" styleClass="input_field" />
       </children>
    </VBox>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </AnchorPane>

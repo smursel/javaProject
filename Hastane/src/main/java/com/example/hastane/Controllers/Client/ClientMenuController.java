@@ -41,7 +41,7 @@ public class ClientMenuController implements BorderPaneSayfaYonetimi, Initializa
         yukleSayfa(mainBorderPane, "/Fxml/Client/RandevuAl.fxml");
     }
     public void ziyaretlerimYukle(MouseEvent event){
-        yukleSayfa(mainBorderPane, "/Fxml/Client/AnaSayfa.fxml");
+        yukleSayfa(mainBorderPane, "/Fxml/Client/Ziyaretlerim.fxml");
     }
     public void hesabimYukle(MouseEvent event){
         yukleSayfa(mainBorderPane, "/Fxml/Client/Hesabim.fxml");

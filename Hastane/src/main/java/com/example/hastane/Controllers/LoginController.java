@@ -81,7 +81,7 @@ public class LoginController implements BorderPaneSayfaYonetimi, Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         acc_selector.setValue("Hasta");
-        acc_selector.getItems().addAll("Admin", "Hekim", "Hasta");
+        acc_selector.getItems().addAll("Hekim", "Hasta");
     }
 
 }

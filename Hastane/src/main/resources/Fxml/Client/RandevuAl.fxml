@@ -79,7 +79,7 @@
         </DatePicker>
       <Button fx:id="randevu_al_button" defaultButton="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="125.0" styleClass="login_logo_container" text="RANDEVU AL" textFill="WHITE">
          <FlowPane.margin>
-            <Insets left="226.0" top="20.0" />
+            <Insets left="226.0" right="121.0" top="20.0" />
          </FlowPane.margin>
          <effect>
             <DropShadow spread="0.07" />
@@ -88,5 +88,10 @@
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
+      <Label fx:id="randevuAL_hata_lbl" prefHeight="18.0" prefWidth="413.0" text="Hata" textFill="RED">
+         <FlowPane.margin>
+            <Insets left="82.0" top="16.0" />
+         </FlowPane.margin>
+      </Label>
     </FlowPane>
 </AnchorPane>
