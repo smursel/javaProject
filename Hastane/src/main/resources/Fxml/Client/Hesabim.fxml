@@ -220,4 +220,5 @@
          </FlowPane.margin>
       </Separator>
     </FlowPane>
+   <Label fx:id="hesabim_hata_lbl" alignment="TOP_LEFT" layoutX="135.0" layoutY="530.0" prefHeight="114.0" prefWidth="578.0" text="hata" textFill="RED" wrapText="true" />
 </AnchorPane>

@@ -42,7 +42,6 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
     public PasswordField hastaPassword;
     public Label sign_hata_label;
 
-
     @Override
     public void silMenu(Object pane) {
         ((AnchorPane) pane).getChildren().clear();
@@ -50,9 +49,12 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
     @Override
     public void yukleSayfa(Object pane, String fxml) {}     //kullanılmıyacak
 
+    public void girisYapLbl(){
+        yukleSayfa("/Fxml/Login.fxml");
+    }
     public void kayitOlButon(MouseEvent event) {
         //silMenu(mainAnchorPane);    //login anchorunu sildik
-        yukleSayfa("/Fxml/Login.fxml");
+
     }
     public void yukleSayfa(String fxml) {
         Parent root = null;
@@ -89,6 +91,7 @@ public class SignInController implements BorderPaneSayfaYonetimi, Initializable 
             throw new RuntimeException(e);
         }
 
+        //jsondaki diziyi list tipine dönüştürdük
         JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
         String jsonList = jsonObject.getAsJsonArray("iller").toString();
         Type listType = new TypeToken<List<String>>() {}.getType();

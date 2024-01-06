@@ -1,13 +1,21 @@
 package com.example.hastane.Controllers.Client;
 
 
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
+import com.google.gson.reflect.TypeToken;
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.lang.reflect.Type;
 import java.net.URL;
 import java.time.LocalDate;
+import java.util.List;
 import java.util.ResourceBundle;
 
 public class RandevuAlController implements Initializable {
@@ -30,9 +38,27 @@ public class RandevuAlController implements Initializable {
             }
         });
     }
+    private void illerEkleComBox(){
+        Gson gson = new Gson(); //gson nesnesi
+        FileReader reader;
+        try {
+            reader = new FileReader("src/main/resources/Json/iller.json");    //dosya okuma
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+
+        //jsondaki diziyi list tipine dönüştürdük
+        JsonObject jsonObject = gson.fromJson(reader, JsonObject.class);
+        String jsonList = jsonObject.getAsJsonArray("iller").toString();
+        Type listType = new TypeToken<List<String>>() {}.getType();
+        List<String> list = gson.fromJson(jsonList, listType);
+
+        randevu_iller_comBox.setItems(FXCollections.observableArrayList(list));
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         datePicTarihKisitla();
+        illerEkleComBox();
     }
 }

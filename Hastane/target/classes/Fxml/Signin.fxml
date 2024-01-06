@@ -23,7 +23,7 @@
             <Insets />
          </VBox.margin></FontAwesomeIconView>
       <Text fill="WHITE" stroke="BLACK" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="E-HASTANE" />
-      <Label onMouseClicked="#kayitOlButon" text="Giriş yap" underline="true">
+      <Label onMouseClicked="#girisYapLbl" text="Giriş yap" underline="true">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor>

@@ -25,19 +25,6 @@
             <Insets top="150.0" />
          </FlowPane.margin>
       </ComboBox>
-        <Label prefHeight="26.0" prefWidth="150.0" text="KLİNİK">
-            <FlowPane.margin>
-                <Insets left="75.0" top="20.0" />
-            </FlowPane.margin>
-            <font>
-                <Font name="System Bold" size="12.0" />
-            </font>
-        </Label>
-      <ComboBox fx:id="randevu_klinikler_comBox" prefHeight="26.0" prefWidth="200.0" styleClass="account_selector">
-         <FlowPane.margin>
-            <Insets top="20.0" />
-         </FlowPane.margin>
-      </ComboBox>
         <Label prefHeight="26.0" prefWidth="150.0" text="HASTANE">
             <FlowPane.margin>
                 <Insets left="75.0" top="20.0" />
@@ -47,6 +34,19 @@
             </font>
         </Label>
       <ComboBox fx:id="randevu_hastaneler_comBox" prefHeight="26.0" prefWidth="200.0" styleClass="account_selector">
+         <FlowPane.margin>
+            <Insets top="20.0" />
+         </FlowPane.margin>
+      </ComboBox>
+        <Label prefHeight="26.0" prefWidth="150.0" text="KLİNİK">
+            <FlowPane.margin>
+                <Insets left="75.0" top="20.0" />
+            </FlowPane.margin>
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+      <ComboBox fx:id="randevu_klinikler_comBox" prefHeight="26.0" prefWidth="200.0" styleClass="account_selector">
          <FlowPane.margin>
             <Insets top="20.0" />
          </FlowPane.margin>
