@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="850.0" style="-fx-background-color: #EEEEFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.hastane.Controllers.Doctor.HastalarimController">
+   <children>
+      <TableView layoutX="25.0" layoutY="120.0" prefHeight="500.0" prefWidth="734.0" style="-fx-border-color: lightgrey;">
+        <columns>
+          <TableColumn prefWidth="111.20001602172852" text="Tarih" />
+          <TableColumn prefWidth="144.79994201660156" text="Randevu Id" />
+            <TableColumn prefWidth="156.800048828125" text="Hasta Adı" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label alignment="CENTER" layoutX="25.0" layoutY="103.0" prefHeight="22.0" prefWidth="734.0" style="-fx-background-color: lightgrey;" text="Randevu Alan Hastalarım">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <DialogPane layoutX="168.0" layoutY="221.0" prefHeight="286.0" prefWidth="444.0">
+         <header>
+            <Label alignment="CENTER" text=" Hasta adi">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </header>
+         <content>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="422.0" text="Reçete Ataması" />
+                  <Label text="İlaç" />
+                  <TextField>
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="20.0" layoutY="20.0" text="Kullanım Şekli" />
+                  <TextField layoutX="20.0" layoutY="38.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="20.0" layoutY="64.0" text="Günlük Doz" />
+                  <TextField layoutX="20.0" layoutY="81.0">
+                     <VBox.margin>
+                        <Insets bottom="15.0" />
+                     </VBox.margin>
+                  </TextField>
+                  <Label layoutX="20.0" layoutY="107.0" text="Kaç Gün" />
+                  <TextField layoutX="20.0" layoutY="124.0" />
+               </children>
+            </VBox>
+         </content>
+         <buttonTypes>
+            <ButtonType fx:constant="APPLY" />
+         </buttonTypes>
+      </DialogPane>
+   </children>
+</AnchorPane>

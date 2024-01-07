@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 
 import java.io.IOException;
@@ -22,9 +23,10 @@ public class DoctorMenuController implements BorderPaneSayfaYonetimi, Initializa
 
     public BorderPane docBorderpane;
 
-
     @Override
-    public void silMenu(Object pane){}
+    public void silMenu(Object pane){
+        ((BorderPane) docBorderpane).setLeft(null);
+    }
 
     @Override
     public void yukleSayfa(Object pane, String fxml) {
@@ -36,6 +38,22 @@ public class DoctorMenuController implements BorderPaneSayfaYonetimi, Initializa
         }
         ((BorderPane)pane).setCenter(root);
     }
+
+    public void hastalarimYukle(MouseEvent event){
+        yukleSayfa(docBorderpane, "/Fxml/Doctor/Hastalarim.fxml");
+    }
+
+    public void receteYazYukle(MouseEvent event){
+        yukleSayfa(docBorderpane, "/Fxml/Doctor/ReceteYaz.fxml");
+    }
+
+    public void hesabimYukle(MouseEvent event){ yukleSayfa(docBorderpane, "/Fxml/Client/Hesabim.fxml"); }
+
+    public void cikisYapYukle(MouseEvent event){
+        silMenu(docBorderpane);    //borderpane in left kısmını sildik (menüyü)
+        yukleSayfa(docBorderpane,"/Fxml/Login.fxml");
+    }
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

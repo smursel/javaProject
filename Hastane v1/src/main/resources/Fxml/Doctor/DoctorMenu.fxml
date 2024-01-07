@@ -33,9 +33,9 @@
             </Line>
         </VBox>
         <VBox layoutY="118.0" prefHeight="243.0" prefWidth="180.0">
-            <Button fx:id="hastalarım_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Hastalarım">
+            <Button fx:id="hastalarım_btn" mnemonicParsing="false" onMouseClicked="#hastalarimYukle" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Hastalarım">
                 <graphic>
-                    <FontAwesomeIconView glyphName="HOME" size="20" />
+                    <FontAwesomeIconView glyphName="GROUP" size="16" />
                 </graphic>
                 <VBox.margin>
                     <Insets left="42.0" top="10.0" />
@@ -44,9 +44,9 @@
                     <DropShadow blurType="ONE_PASS_BOX" />
                 </effect>
             </Button>
-            <Button fx:id="receteYaz_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Reçete Yaz">
+            <Button fx:id="receteYaz_btn" mnemonicParsing="false" onMouseClicked="#receteYazYukle" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Reçete Yaz">
                 <graphic>
-                    <FontAwesomeIconView glyphName="CALENDAR" size="17" />
+                    <FontAwesomeIconView glyphName="BOOK" size="17" />
                 </graphic>
                 <VBox.margin>
                     <Insets bottom="20.0" left="42.0" top="20.0" />
@@ -60,7 +60,7 @@
                     <Insets left="32.0" />
                 </VBox.margin>
             </Line>
-            <Button fx:id="hesabim_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FF88CC; -fx-text-fill: #FFFFFF; -fx-alignment: LEFT;" text="Hesabım" textFill="WHITE">
+            <Button fx:id="hesabim_btn" mnemonicParsing="false" onMouseClicked="#hesabimYukle" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FF88CC; -fx-text-fill: #FFFFFF; -fx-alignment: LEFT;" text="Hesabım" textFill="WHITE">
                 <graphic>
                     <FontAwesomeIconView fill="WHITE" glyphName="USER" size="20" />
                 </graphic>
@@ -71,7 +71,7 @@
                     <DropShadow blurType="ONE_PASS_BOX" />
                 </effect>
             </Button>
-            <Button fx:id="cikisYap_btn" mnemonicParsing="false" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FF88CC; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Çıkış Yap" textFill="WHITE">
+            <Button fx:id="cikisYap_btn" mnemonicParsing="false" onMouseClicked="#cikisYapYukle" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FF88CC; -fx-text-fill: #000000; -fx-alignment: LEFT;" text="Çıkış Yap" textFill="WHITE">
                 <graphic>
                     <FontAwesomeIconView glyphName="EXTERNAL_LINK" selectionFill="BLACK" size="20" text="" />
                 </graphic>
